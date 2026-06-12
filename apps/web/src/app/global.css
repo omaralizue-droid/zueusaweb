@@ -268,6 +268,32 @@
   color: #94A3B8;
 }
 
+.planner-range {
+  appearance: none;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(224,0,0,0.95), rgba(255,122,122,0.9));
+}
+.planner-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #FFFFFF;
+  border: 3px solid #E00000;
+  box-shadow: 0 8px 20px rgba(224,0,0,0.3);
+  cursor: pointer;
+}
+.planner-range::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #FFFFFF;
+  border: 3px solid #E00000;
+  box-shadow: 0 8px 20px rgba(224,0,0,0.3);
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .desktop-nav { display: none !important; }
   .mobile-btn  { display: flex !important; }

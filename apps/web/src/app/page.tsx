@@ -6,8 +6,10 @@ import ServicesSection from '@/components/zue/ServicesSection';
 import AboutSection from '@/components/zue/AboutSection';
 import ProcessSection from '@/components/zue/ProcessSection';
 import ContactSection from '@/components/zue/ContactSection';
+import BpoPlannerSection from '@/components/zue/BpoPlannerSection';
 
 export default function ZuePage() {
+  const navItems = ['Home', 'Services', 'Planner', 'About', 'Process', 'Contact'];
   const [chatOpen, setChatOpen] = useState(false);
   const [chatMessages, setChatMessages] = useState([
     {
@@ -97,7 +99,7 @@ export default function ZuePage() {
           <span className="text-[#E00000] text-xs font-bold ml-0.5">USA</span>
         </div>
         <div className="desktop-nav flex gap-8 items-center">
-          {['Home', 'Services', 'About', 'Process', 'Contact'].map((i) => (
+          {navItems.map((i) => (
             <a
               key={i}
               className={scrolled ? 'nav-link-dark' : 'nav-link'}
@@ -125,7 +127,7 @@ export default function ZuePage() {
       </nav>
       {menuOpen && (
         <div className="fixed top-[66px] left-0 right-0 z-[99] bg-white border-b border-[#E2E8F0] p-4 flex flex-col gap-4 shadow-lg">
-          {['Home', 'Services', 'About', 'Process', 'Contact'].map((i) => (
+          {navItems.map((i) => (
             <a key={i} className="nav-link-dark" onClick={() => scrollTo(i.toLowerCase())}>
               {i}
             </a>
@@ -270,6 +272,7 @@ export default function ZuePage() {
       </section>
 
       <ServicesSection />
+      <BpoPlannerSection />
       <AboutSection />
       <ProcessSection />
 
